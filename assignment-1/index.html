@@ -14,10 +14,30 @@
 
         </header>
         <main>
+            <section>
+            <!--Form for creating the pizza-->
+            <form method="post" action="#">
+                <fieldset>
+                    <Legend>What size of Pizza would you like?</Legend>
+                    <!--radio buttons for choosing size-->
+                    <label for="small">Small (6 slices)</label>
+                    <input type="radio" name="size" id="small" value="small" required /><!--"required" on one option makes all with the same name count as required-->
 
+                    <label for="medium">Medium (8 slices)</label>
+                    <input type="radio" name="size" id="medium" value="medium" required />
+
+                    <label for="large=">Large (10 slices)</label>
+                    <input type="radio" name="size" id="large" value="large" required />
+
+                    <label for="x-large">Extra Large</label>
+                    <input type="radio" name="size" id="x-large" value="x-large" required />
+
+                </fieldset>
+            </form>
+            </section>
         </main>
         <footer>
-            
+
         </footer>
     </body>
 </html>
