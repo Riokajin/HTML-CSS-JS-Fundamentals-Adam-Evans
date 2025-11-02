@@ -8,7 +8,8 @@
         <!--placeholder for image-->
         <link rel="shortcut icon" href="blank" type="blank" />
         <link rel="stylesheet" href="css/styles.css" />
-        <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron&family=Rokkitt&display=swap" >
+
 
     </head>
     <body>
@@ -21,6 +22,22 @@
             <section>
                 <!--Form for choosing the pizza size-->
                 <form method="post" action="#">
+                    <!--contact information fieldset name, email and phone number-->
+                    <fieldset class="customer-fieldset">
+                        <legend>Contact information</legend>
+
+                        <label for="name">Name:</label>
+                        <input type="text" name="name" id="name" required placeholder="Cloud Strife"/>
+
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" required placeholder="cloud@avalancherebellion.net"/>
+
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" name="phone" id="phone" placeholder="555-1234"/>
+
+                    </fieldset>
+
+
                     <!--Pizza Size-->
                     <fieldset class="size-fieldset">
                         <legend>What size of Pizza would you like?</legend>
@@ -143,7 +160,7 @@
                             <input type="checkbox" name="toppings" id="steak" value="steak">
                             <label for="steak">Steak Strips</label>
                         </div>
-
+                        <!--another group for vegetables-->
                         <div class="topping-group veg-group">
                             <h4>Vegetables</h4>
 
@@ -200,27 +217,54 @@
                         </div>
 
                     </fieldset>
+                    <!--new fieldset for seasonings-->
+                    <fieldset class="seasoning-fieldset">
+                        <legend>Seasonings</legend>
 
-                    <fieldset>
+                        <input type="checkbox" name="seasonings" id="oregano" value="oregano">
+                        <label for="oregano">Oregano</label>
+
+                        <input type="checkbox" name="seasonings" id="basil" value="basil">
+                        <label for="basil">Basil</label>
+
+                        <input type="checkbox" name="seasonings" id="flakes" value="flakes">
+                        <label for="flakes">Chili Flakes</label>
+
+                        <input type="checkbox" name="seasonings" id="garlic-powder" value="garlic-powder">
+                        <label for="garlic-powder">Garlic Powder</label>
+                        
+                        <input type="checkbox" name="seasonings" id="italian" value="italian">
+                        <label for="italian">Italian Herb Blend</label>
                         
                     </fieldset>
+                    <!--fieldset for order details, pickup time and special instructions-->
+                    <fieldset class="order-details-fieldset">
+                        <legend>Order Details</legend>
+                        <!--asap or schedule time-->
+                        
+                        <input type="radio" name="pickup-option" id="pickup-asap" value="asap" checked/>
+                        <label for="pickup-asap">ASAP (as soon as it's ready)</label>
+                        
+                        <input type="radio" name="pickup-option" id="pickup-scheduled" value="scheduled"/>
+                        <label for="pickup-scheduled">Schedule a pickup time</label>
+
+                        <!--choose a time for scheduled pickup-->
+                        <label for="pickup-time">Preferred Time:</label>
+                        <input type="time" name="pickup-time" id="pickup-time" />
+
+                        <label for="notes">Special Instructions:</label>
+                        <textarea name="notes" id="notes" rows="5" cols="40" placeholder="Cook time should not exceed Knights of the Round."></textarea>
+                    </fieldset>
+
+
+                    <!--Submit and Reset buttons-->
+                    <button type="submit" class="limit-break-button">Submit Pizza Order</button>
                     
-                    <fieldset>
-                        
-                    </fieldset>
-
-                    <fieldset>
-                        
-                    </fieldset>
-
-                    <fieldset>
-                        
-                    </fieldset>
                 </form>
             </section>
         </main>
         <footer>
-
+            <p>Mako Meltworks. Powered by materia and latenight coding.</p>
         </footer>
     </body>
 </html>
