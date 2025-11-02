@@ -51,6 +51,7 @@ body {
 }
 
 /*settings for the thickness fieldset*/
+/*sty;ed ;ole Avalanche armor with brick tones and independent materia purple*/
 /*Independent Materia Purple, glowing aura*/
 .thickness-fieldset {
     background-color: #3b2f2f; /*aged brick / bar wall*/
@@ -84,3 +85,82 @@ body {
 .thickness-fieldset label:hover {
     color: #9933ff;
 }
+
+/*settings for Bake level fieldset*/
+/*styled like a mako oven control panel with summon materia red and reactor glow */
+.bake-fieldset {
+    background-color: #4e4e4e; /*reactor core steel*/
+    border: 2px solid #ff0033; /* summon materia red border*/
+    border-radius: 8px;
+    padding: 1.5em;
+    margin-bottom: 2em;
+    box-shadow: 0 0 10px #ff003333
+}
+
+/*Legend styled with tech font and summon materia red*/
+.bake-fieldset legend {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.3em;
+    color: #ff0033;
+    padding: 0 0.5em;
+}
+
+/*Labels for Bake level inputs*/
+.bake-fieldset label {
+    display: block;
+    margin: 0.6em 0;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    color: #f5f5dc;
+}
+
+/*Radio buttons colored summon materia red when selected */
+.bake-fieldset input[type="radio"] {
+    accent-color: #ff0033;
+    margin-right: 0.5em;
+}
+
+/*hover effect: same red glow*/
+.bake-fieldset label:hover {
+    color: #ff0033
+}
+
+
+/*Crust Base. styled like support materia - optional but customizes the build*/
+
+.base-fieldset {
+    background-color: #2f2f2f; /*console panel steel */
+    border: 2px solid #0033cc; /*support materia blue */
+    border-radius: 8px;
+    padding: 1.5em;
+    margin-bottom: 2em;
+    box-shadow: 0 0 10px #0033cc33; /*subtle blue glow*/
+}
+
+.base-fieldset legend {
+    font-family: 'Orbitron', sans-serif;
+    font-size 1.3em;
+    color: #0033cc;
+    padding: 0 0.5em;
+}
+
+.base-fieldset select {
+    width: 100%;
+    padding: 0.5em;
+    font-family: 'Rokkitt', serif;
+    font-size: 1em;
+    background-color: #1e1e1e;
+    color: #f5f5dc;
+    border: 2px solid #0033cc;
+    border-radius: 4px;
+    box-shadow: 0 0 5px #0033cc33;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.base-fieldset select:hover, .base-fieldset select:focus {
+    border-color: #3366ff; /* Brighter edge when hovered or focused*/
+    box-shadow: 0 0 10px #3366ff55;
+    outline: none; /*removes default browser focus effect*/
+}
+
