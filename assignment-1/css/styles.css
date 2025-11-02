@@ -423,7 +423,7 @@ body {
 
 .submit:hover {
     background-color: #ff1a4d;
-    box-shado: 0 0 16px #ff0033aa, 0 0 32px #ff003366;
+    box-shadow: 0 0 16px #ff0033aa, 0 0 32px #ff003366;
     transform: scale(1.02);/*makes the button grow when hovered and changes color*/
 }
 /*makes the button look pushed in after clicking*/
