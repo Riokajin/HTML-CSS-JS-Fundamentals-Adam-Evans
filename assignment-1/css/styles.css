@@ -15,7 +15,21 @@ body {
 
 }
 
-/*
+/*Contact information settings*/
+.customer-fieldset{
+    border: 2px solid #4da6ff;
+    background-color: #2a2f38;
+    padding: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #4da6ff33;
+}
+
+.customer-fieldset legend {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.3em;
+    color: #4da6ff;
+    padding: 0 0.5em;
+}
 
 
 /*settings for the size fieldset*/
@@ -338,4 +352,58 @@ body {
     color: #99ccff;
     font-weight: bold;
 }
+
+/*Order details styled like a shinra console*/
+
+.order-details-fieldset {
+    background-color: #2f2f2f;
+    border: 2px solid #888;
+    border-radius: 8px;
+    padding: 1.5em;
+    margin-bottom: 2em;
+    box-shadow: 0 0 10px #88888833;
+    
+}
+
+.order-details-fieldset legend {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.3em;
+    color: #888;
+    padding: 0 0.5em;
+}
+
+.order-details-fieldset label {
+    display: block;
+    margin: 0.6em 0;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    color: #f5f5dc
+}
+
+.order-details-fieldset label:hover {
+    color: #888
+}
+
+.order-details-fieldset input[type="text"],
+.order-details-fieldset input[type="time"],
+.order-details-fieldset select,
+.order-details-fieldset textarea {
+    background-color: #1f1f1f;
+    color: #f5f5dc;
+    border: 2px solid #666;
+    padding: 0.5em;
+    border-radius: 6px;
+    width: 100%;
+    margin-bottom: 1em;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.order-details-fieldset input[type="radio"] {
+    accent-color: #888888;
+    margin-right: 0.5em;
+    vertical-align: middle;
+}
+
+
+
 
