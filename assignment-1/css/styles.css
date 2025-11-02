@@ -6,6 +6,17 @@ Orbitron: tech-style for UI elements to feel like a console*/
 @import url('https://fonts.googleapis.com/css2?family=Rokkitt&family=Orbitron&display=swap');
 
 /*The Style is based on elements from the original FF7 game on PS1 and FF7 Crisis Core from the PSVita for extra materia colours*/
+
+/*Banner image styling*/
+.banner {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
 /*overall theme of the page, dark wood background, parchment paper text, and padding*/
 body {
     background-color: #2e1f1a; /*dark wood background*/
