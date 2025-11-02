@@ -38,7 +38,7 @@ body {
     margin: 0.6em 0;/*vertical spacing*/
     cursor: pointer;/*hand cursor on hover to simulate a similar visual to the selector in the FF7 menus*/
     transition: color 0.3s ease;/*change colour smoothly on hover*/
-    color: #f5f5dc; /*default parchment paper colour*/
+    color: #f5f5dc; /*default parchment paper colour included for potential change later*/
 }
 /*change color of radio button when option is selected*/
 .size-fieldset input[type="radio"] {
@@ -196,4 +196,63 @@ body {
 
 .cheese-fieldset label:hover {
     color: #ffcc00;
+}
+
+/*Toppings styled as Effect Materia (status modifiers) yellow-green*/
+
+.toppings-fieldset {
+    background-color: #2f2f1f; /*damaged reactor color steel*/
+    border: 2px solid #ccff66; /*effect materia yellow-green*/
+    border-radius: 8px;
+    padding: 1.5em;
+    margin-bottom: 2em;
+    box-shadow: 0 0 10px #ccff6633;
+}
+
+.toppings-fieldset legend {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.3em;
+    color: #ccff66;
+    padding: 0 0.5em;
+}
+
+/* Meat group red-violet of hp-up materia in crisis core */
+
+.meat-group {
+    background-color: #4a2a2a; /*Charcoal Ember base*/
+    border: 2px solid #cc3399; /*red-violet hp-plus independent materia*/
+    border-radius: 6px;
+    padding: 1em;
+    margin-top: 1em;
+    box-shadow: 0 0 10px #cc339933;
+}
+
+.meat-group h4 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1em;
+    color: #ff99cc; /* soft pink-purple for contrast */
+    margin-bottom: 0.5em;
+}
+
+.meat-group input[type="checkbox"] {
+    accent-color: #cc3399; /*red-violet color for meat selections*/
+    margin-right: 0.5em;
+}
+
+.meat-group label {
+    display: block;
+    margin: 0.4em 0;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    color: #f5f5dc;
+}
+
+.meat-group label:hover {
+    color: #cc3399;
+}
+
+/*selection color change and bold when checked*/
+.meat-group input[type="checkbox"]:checked + label {
+    color: #cc3399;
+    font-weight: bold;
 }
