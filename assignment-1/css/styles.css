@@ -256,3 +256,42 @@ body {
     color: #cc3399;
     font-weight: bold;
 }
+
+/*Styling vegetables as light-green for healing materia*/
+
+.veg-group {
+    background-color: #145c5c; /*slightly darker lifestream effect (was too bright to use otherwise)*/
+    border: 2px solid #66ffcc; /*light-green healing materia*/
+    border-radius: 6px;
+    padding: 1em;
+    margin-top: 1em;
+    box-shadow: 0 0 8px #66ffcc33;
+}
+
+.veg-group h4 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1em;
+    color: #b3fff0; /*slightly different green for contrast*/
+    margin-bottom: 0.5em;
+}
+
+.veg-group input[type="checkbox"] {
+    accent-color: #66ffcc;
+    margin-right: 0.5em;
+}
+
+.veg-group label {
+    display: block;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    color: #f5f5dc;
+}
+
+.veg-group label:hover {
+    color: #66ffcc;
+}
+
+.veg-group input[type="checkbox"]:checked + label {
+    color: #66ffcc;
+    font-weight: bold;
+}
