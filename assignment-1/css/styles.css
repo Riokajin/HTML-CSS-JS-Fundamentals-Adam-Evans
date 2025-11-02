@@ -456,9 +456,76 @@ body {
     box-shadow: 0 0 14px #88888899 inset;
 }
 
+/*style info for process-order PHP*/
 
+body.confirmation {
+    background-color: #2e2e38;
+    color: #f5f5dc;
+}
 
+.confirmation main {
+    background-color: #3a3a3a;
+    border: 2px solid #7ec8c8;
+    box-shadow: 0 0 12px #7ec8c8;
+    padding: 2em;
+    border-radius: 8px;
+}
 
+.confirmation h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #7ec8c8;
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+    text-shadow: 0 0 4px #7ec8c8;
+}
 
+.confirmation li {
+    margin-bottom: 0.5em;
+    text-shadow: 0 0 4px #7ec8c8;
+    padding-left: 0.5em;
+}
+
+.signature {
+    margin-top: 2em;
+    font-style: italic;
+    color: #ccc;
+    text-align: right;
+}
+
+body.error-screen {
+    background-color: #1a0000;
+    color: #f8dada;
+}
+
+.error-screen main {
+    background-color: #300000;
+    border: 3px dashed #cc0000;
+    box-shadow: 0 0 16px #cc0000;
+    padding: 2em;
+    border-radius: 8px;
+}
+
+.error-screen h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #ff4444;
+    font-size: 2em;
+    text-transform: uppercase;
+    margin-bottom: 0.5em;
+    text-shadow: 0 0 6px #ff4444;
+}
+
+.error-list li {
+    margin-bottom: 0.5em;
+    padding-left: 0.5em;
+    border-left: 4px solid #ff4444;
+    color: #ffaaaa;
+    font-weight: bold;
+}
+
+.error-screen a {
+    color: #ff8888;
+    text-decoration: underline;
+    font-weight: bold;
+}
 
 
