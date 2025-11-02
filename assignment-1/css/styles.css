@@ -404,6 +404,61 @@ body {
     vertical-align: middle;
 }
 
+/*styling for submit and reset buttons*/
+.submit {
+    background-color: #ff0033;
+    color: #f5f5dc;
+    border: 2px solid #888;
+    border-radius: 6px;
+    padding: 0.6em 1.2em;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    box-shadow: 0 0 12px #ff003355, 0 0 32px #ff003366;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease;
+}
+
+.submit:hover {
+    background-color: #ff1a4d;
+    box-shado: 0 0 16px #ff0033aa, 0 0 32px #ff003366;
+    transform: scale(1.02);/*makes the button grow when hovered and changes color*/
+}
+/*makes the button look pushed in after clicking*/
+.submit:active {
+    background-color: #cc0029;
+    box-shadow: 0 0 20px #ff003399 inset;
+    transform: scale(0.98);
+}
+
+.reset {
+    background-color: #2f2f2f;
+    color: #f5f5dc;
+    border: 2px solid #888;
+    border-radius: 6px;
+    padding: 0.6em 1.2em;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    box-shadow: 0 0 10px #88888833;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reset:hover {
+    background-color: #444;
+    box-shadow: 0 0 12px #88888866;
+}
+
+.reset:active {
+    background-color: #1f1f1f;
+    box-shadow: 0 0 14px #88888899 inset;
+}
+
+
+
+
 
 
 
