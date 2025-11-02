@@ -12,28 +12,75 @@
     <body>
         <header><!--Introduction to page-->
             <h1>Seventh Heaven Pizza Console</h1>
-            <p>Welcome to the hidden menu beneath the bar. Our mako-powered ovens are prepped and ready — just like Tifa’s cocktails, every pie is handcrafted for heroes. Choose your components and fuel up before your next mission.</p>
+            <p>Welcome to the hidden menu beneath the bar. Our mako-powered ovens are prepped and ready, just like Tifa’s cocktails, every pie is handcrafted for heroes. Choose your components and fuel up before your next mission.</p>
 
         </header>
         <main>
             <section>
                 <!--Form for choosing the pizza size-->
                 <form method="post" action="#">
+                    <!--Pizza Size-->
                     <fieldset>
-                        <Legend>What size of Pizza would you like?</Legend>
+                        <legend>What size of Pizza would you like?</legend>
                         <!--radio buttons for choosing size-->
                         <label for="small">Starter Ration (Small - 6 slices)</label>
-                        <input type="radio" name="size" id="small" value="small" required /><!--"required" on one option makes all with the same name count as required-->
+                        <input type="radio" name="size" id="small" value="small"/><!--"required" on one option makes all with the same name count as required-->
 
                         <label for="medium">Party Standard (Medium - 8 slices)</label>
-                        <input type="radio" name="size" id="medium" value="medium" required />
+                        <input type="radio" name="size" id="medium" value="medium"/>
 
                         <label for="large=">Mission Meal (Large - 10 slices)</label>
-                        <input type="radio" name="size" id="large" value="large" required />
+                        <input type="radio" name="size" id="large" value="large"/>
 
                         <label for="x-large">Summon Spread (Extra Large - 12 slices)</label>
-                        <input type="radio" name="size" id="x-large" value="x-large" required />
+                        <input type="radio" name="size" id="x-large" value="x-large"/>
 
+                    </fieldset>
+
+                    <!--Crust type-->
+                    <fieldset>
+                        <legend>Select your crust thickness</legend>
+
+                        <label for="thin">Thin Crust</label>
+                        <input type="radio" name="thickness" id="thin" value="thin" required/>
+
+                        <label for="thick">Thick Crust</label>
+                        <input type="radio" name="thickness" id="thick" value="thick"/>
+
+                        <label for="regular">Regular</label>
+                        <input type="radio" name="thickness" id="regular" value="regular"/>                        
+                    </fieldset>
+
+                    <!--How well-done it is.-->
+                    <fieldset>
+                        <legend>Bake level</legend>
+
+                        <label for="light">Lightly-done</label>
+                        <input type="radio" name="bake" id="light" value="light" required/>
+
+                        <label for="standard">Standard</label>
+                        <input type="radio" name="bake" id="standard" value="standard"/>
+
+                        <label for="well">Well-done</label>
+                        <input type="radio" name="bake" id="well" value="well"/>
+
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Crust Base</legend>
+                        <!--drop-down menu for choosing optional settings of base crust-->
+                        <label for="crustBase"></label>
+                        <select name="crustBase" id="crustBase">
+                            <option value="">Standard</option>
+                            <option value="gluten-free">Gluten-Free</option>
+                            <option value="cauliflower">Cauliflower</option>
+                            <option value="whole-wheat">Whole Wheat</option>
+                        </select>
+
+
+                        <label></label>
+                        
                     </fieldset>
                 </form>
             </section>
