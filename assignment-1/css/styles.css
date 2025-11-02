@@ -5,7 +5,7 @@ Rokkitt: serif font for body text to look like parchment paper
 Orbitron: tech-style for UI elements to feel like a console*/
 @import url('https://fonts.googleapis.com/css2?family=Rokkitt&family=Orbitron&display=swap');
 
-/*The Style is based on elements from the original FF7 game on PS1*/
+/*The Style is based on elements from the original FF7 game on PS1 and FF7 Crisis Core from the PSVita for extra materia colours*/
 /*overall theme of the page, dark wood background, parchment paper text, and padding*/
 body {
     background-color: #2e1f1a; /*dark wood background*/
@@ -16,20 +16,20 @@ body {
 }
 /*settings for the size fieldset*/
 
-/*Command materia yellow, glowing aura*/
+/*Deep Green for offensive magic, glowing aura*/
 .size-fieldset {
     background-color: #1e1e1e; /*industrial base*/
-    border: 2px solid #ffcc00; /*Lifestream glow*/
+    border: 2px solid #009933; /*Deep Green*/
     border-radius: 8px;/*curved edges*/
     padding: 1.5em;
     margin-bottom: 2em;
-    box-shadow: 0 0 10px #66ffcc33;/*subtle glowing effect*/
+    box-shadow: 0 0 10px #00993333;/*subtle glowing effect*/
 }
-/*Legend using a tech-like font and command materia yellow*/
+/*Legend using a tech-like font and deep green for offensive magic materia*/
 .size-fieldset legend {
     font-family: 'Orbitron', sans-serif;
     font-size: 1.3em;
-    color: #ffcc00; /* Command materia yellow */
+    color: #009933; /* Command materia yellow */
     padding: 0 0.5em;
 }
 /*labels for each pizza size option*/
@@ -42,12 +42,12 @@ body {
 }
 /*change color of radio button when option is selected*/
 .size-fieldset input[type="radio"] {
-    accent-color: #ffcc00; /*command materia*/
+    accent-color: #009933; /*command materia*/
     margin-right: 0.5em;
 }
 /*change color when hovering over option*/
 .size-fieldset label:hover {
-    color: #ffcc00
+    color: #009933
 }
 
 /*settings for the thickness fieldset*/
@@ -159,8 +159,41 @@ body {
 }
 
 .base-fieldset select:hover, .base-fieldset select:focus {
-    border-color: #3366ff; /* Brighter edge when hovered or focused*/
+    border-color: #3366ff; /*Brighter edge when hovered or focused*/
     box-shadow: 0 0 10px #3366ff55;
     outline: none; /*removes default browser focus effect*/
 }
 
+/* Chesse Type. Styled like a yellow command materia selection*/
+.cheese-fieldset {
+    background-color: #3f3a1f; /*bronze console background*/
+    border: 2px solid #ffcc00; /*Command materia yellow*/
+    border-radius: 8px;
+    padding: 1.5em;
+    margin-bottom: 2em;
+    box-shadow: 0 0 10px #ffcc0033; /*subtle yellow glow*/
+}
+
+.cheese-fieldset legend {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.3em;
+    color: #ffcc00;
+    padding: 0 0.5em;
+}
+
+.cheese-fieldset label {
+    display: block;
+    margin: 0.6em 0;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    color: #f5f5dc;
+}
+
+.cheese-fieldset input[type="radio"] {
+    accent-color: #ffcc00;
+    margin-right: 0.5em;
+}
+
+.cheese-fieldset label:hover {
+    color: #ffcc00;
+}
