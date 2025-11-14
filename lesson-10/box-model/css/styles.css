@@ -1,34 +1,73 @@
 
 /* STEP 3: Set character encoding (must be first line of file) */
-/* STEP 4a: Set the border properties on the DIV#container - border-width, border-style, border-color */
-div#container {
+@charset "utf-8";
+
+
+html {
+  box-sizing: border-box;
+
 
 }
+
+
+*, *::before, *::after{
+  box-sizing: inherit;
+}
+
+/* STEP 4a: Set the border properties on the DIV#container - border-width, border-style, border-color */
+div#container {
+  border: 5px solid orange;
+  border-left-color: orange;
+  border-right-color: green;
+  border-bottom-style: double;
+  
+}
 /* STEP 4b: Control one of the four borders independently of the others - try border-top-style */
+div#container {
+  border-top-style: dashed;
+}
 
 /* STEP 4c: Apply shorthand to bottom border (border-bottom-width) using the clock rule (TRBL) */
+div#container {
+  border-width: 5px 5px 15px 5px;
+}
 
 /* STEP 5a: Set padding values on the DIV#container element - set individual padding values, then use shorthand with the clock rule again (TRBL) */
 div#container {
+  padding: 20px 10px 15px 10px;
 
   margin: 5% auto;
 
 }
 /* STEP 5b: Apply a background-image to the same element (controlling background-repeat, background-position, and background-size) */
+div#container {
+  background-color: blanchedalmond;
+  background-image: url('../images/stucco.jpg');
+}
 
 /* STEP 5c: Instead, apply the same background-image to the BODY, and apply a background-color to the DIV#container */
 body {
+  background-image: url('../images/cardboard-texture.jpg');
+  background-repeat: repeat;
+  background-position: center;
+  background-size: contain;
 
   font-size: 150%;
 }
 
 /* STEP 6a: Control the width of the DIV#container with a fixed unit (px) */
 div#container {
+  width: 90%;
+  
+  
 
 }
 /* STEP 6b: Change the width to a relative unit of measure (%) */
 
 /* STEP 6c: Use an elastic unit, instead (em) and change the base font-size on the BODY element */
+body {
+  font-size: 16px;
+}
 
 /* STEP 7a: Set the width above back to a fixed unit, then adjust the height so the the content no longer fits */
 
@@ -36,12 +75,19 @@ div#container {
 
 /* STEP 8a: Change the display property of the H1 EM element to block, then to inline-block (default for EM is inline) */
 h1 em {
+  display: inline-block;
+  visibility: hidden;
+
+}
+h1:hover em{
+  visibility: visible;
 
 }
 /* STEP 8b: Manipulate the visibility of the H1 EM element (visibility and display are different) */
 
 /* STEP 10: Comment out the width and display settings below for the MAIN SECTION elements, and use Flexbox, instead - set display to 'flex' on the MAIN element (the container of the SECTION elements) - learn more at https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
 main {
+  display: grid;
 
 }
 
@@ -57,3 +103,12 @@ main section:nth-of-type(2) {
 }
 
 /* STEP 9: float the SECTION P IMG element to the left, then right */
+main section p img {
+  float: left;
+  width: auto;
+  display: block
+  
+}
+main section p img:hover {
+  float: right;
+}
