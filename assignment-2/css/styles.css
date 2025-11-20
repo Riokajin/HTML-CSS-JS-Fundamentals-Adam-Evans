@@ -1,2 +1,37 @@
 @charset "utf-8";
 
+body {
+    margin: 0;
+    padding: 0;
+    background: white;
+    color: #000;
+    font-family: 'Anton', 'Impact', system-ui, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #000;
+    text-shadow: none;
+}
+
+.promo-text {
+    color: #007777;
+    font-weight: 900;
+    font-size: 2.2em;
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+    text-shadow: 2px 2px 0 #000;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    line-height: 1.4;
+}
+
+.glow {
+    position: relative;
+    padding: 20px;
+    margin-left: 24px;
+    width: fit-content;
+}
+
