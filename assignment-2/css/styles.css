@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+/* Global reset and font setup for clean baseline and bold visual identity */
 body {
     margin: 0;
     padding: 0;
@@ -7,7 +8,7 @@ body {
     color: #000;
     font-family: 'Anton', 'Impact', system-ui, sans-serif;
 }
-
+/* Header title centered, uppwercase, no shadow to match printed layout */
 h1 {
     text-align: center;
     text-transform: uppercase;
@@ -15,23 +16,78 @@ h1 {
     color: #000;
     text-shadow: none;
 }
-
+/* Promo block tilted, left-aligned, stacked text above glow column */
+.promo-block {
+    margin-left: 24px; /* aligns with glow column */
+    margin-bottom: 16px; /* spacing before image stack */
+    transform: rotate(-2deg); /* mimics printed tilt */
+    transform-origin: top left;
+}
+/* Promo text bold, shadowed, spaced for legibility and impact */
 .promo-text {
     color: #007777;
     font-weight: 900;
-    font-size: 2.2em;
+    font-size: 1.8em;
     font-family: 'Anton', sans-serif;
-    text-align: center;
+    text-align: left;
     text-shadow: 2px 2px 0 #000;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     word-spacing: 2px;
     line-height: 1.4;
+    margin: 0;
 }
-
+/* Glow column left-aligned, tight layout, responsive-safe*/
 .glow {
     position: relative;
-    padding: 20px;
-    margin-left: 24px;
     width: fit-content;
+    margin-inline: 0;
+    padding-block: 0;
+    box-sizing: border-box;
 }
 
+/* Glow background. vertical gradient, responsive height, locked to content */
+.glow::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, transparent 0%, #f2c300 47%, #f2c300 50%, #f2c300 53%, transparent 98%);
+    opacity: 1.0;
+    z-index: 0;
+    pointer-events: none;
+}
+/* Individual figures, layered above glow, spaced vertically */
+.glow figure {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 20px;
+}
+
+
+/* Caption styling bold, spaced, centered below each image*/
+.glow figcaption {
+    font-family: 'Anton', Impact, sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    word-spacing: 1px;
+    padding: 8px 12px;
+    text-align: center;
+}
+/* Image container, crops transparent padding, locks aspect ratio, adds border */
+.image-box {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 16.25rem;
+    aspect-ratio: 13 / 9;
+    overflow: hidden;
+    border: 7px solid #007777;
+}
+/* Image fill, ensures full coverage inside box, trims excess*/
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
