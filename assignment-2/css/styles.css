@@ -36,8 +36,23 @@ h1 {
     line-height: 1.4;
     margin: 0;
 }
+
+.page-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* glow, center, orb*/
+    grid-template-rows: auto auto 1fr auto; /* title, promo, group, footer*/
+    gap: 2vw;
+    justify-content: center;
+    align-items: start; /* aligns child elements to the top of the containers cross axis*/
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+
 /* Glow column left-aligned, tight layout, responsive-safe*/
 .glow {
+    grid-column: 1;
+    grid-row: 2;
     position: relative;
     width: fit-content;
     margin-inline: 0;
@@ -67,13 +82,12 @@ h1 {
 
 
 /* Caption styling bold, spaced, centered below each image*/
-.glow figcaption {
-    font-family: 'Anton', Impact, sans-serif;
+.glow figcaption {    
     font-weight: 900;
-    font-size: 18px;
-    letter-spacing: 0.5px;
-    word-spacing: 1px;
-    padding: 8px 12px;
+    font-size: 1.125rem;
+    letter-spacing: 0.03em;
+    word-spacing: 0.05em;
+    padding: 0.5em 0.75em;
     text-align: center;
 }
 /* Image container, crops transparent padding, locks aspect ratio, adds border */
@@ -83,7 +97,7 @@ h1 {
     max-width: 16.25rem;
     aspect-ratio: 13 / 9;
     overflow: hidden;
-    border: 7px solid #007777;
+    border: 0.45em solid #007777;
 }
 /* Image fill, ensures full coverage inside box, trims excess*/
 .image-box img {
@@ -91,3 +105,48 @@ h1 {
     height: 100%;
     object-fit: cover;
 }
+/* Center column: stacked promotional lines */
+.center-column {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 3vw;
+    font-weight: 900;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    letter-spacing: 0.05em;
+}
+
+/* Center column text lines */
+.center-column p {
+    position: relative;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+    color: #007777;
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+
+/* First letter larger for BradyGames style */
+.center-column p::first-letter {
+    font-size: 1.4rem;
+}
+
+.center-column p:nth-child(odd) {
+    color: #5a0077;
+}
+
+/* Decorative underline bar (always black) */
+.center-column p::after {
+    content: "";
+    display: block;
+    width: 60%;
+    height: 0.2em;
+    background: #000;
+    margin: 0.7em auto 0 auto;
+}
+
+/* hide unerline on last line */
+.center-column p:last-child::after {
+    content: none;
+}
+
