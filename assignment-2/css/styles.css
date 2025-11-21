@@ -16,12 +16,91 @@ h1 {
     color: #000;
     text-shadow: none;
 }
+
+.title-block {
+    position: relative;
+    text-align: center;
+    grid-column: 1 / span 3;
+    grid-row: 1;
+    margin-bottom: 2;
+}
+
+.meteor-bg {
+    grid-column: 2 / span 2;
+    grid-row: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate (-50%, -50%) scale(1.2);
+    opacity: 0.3;
+    z-index: 0;
+    max-width: 100%;
+}
+
+.title-block h1 {
+    position: relative;
+    z-index: 1;
+}
+
+.group-shot {
+    grid-column: 2 / span 2;
+    grid-row: 2;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.group-shot img {
+    position: relative;
+    max-width: 100%;
+    z-index: 3;
+    height: auto;
+}
+
+.orb {
+    position: absolute;
+    top: 77%;
+    right: 2%;
+    background: #c00000;    
+    color: #fff;
+    border-radius: 50%;
+    width: 15rem;
+    height: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.5rem;
+    line-height: 1.15;
+    padding: .5em;
+    transform: rotate(8deg);
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+    margin-left: -2rem;
+    margin-top: 6rem;
+    z-index: 1;
+}
+.orb h2{
+    margin: 0;
+}
+
+
+.orb-number {
+    font-size: 3rem;
+    color: #ff6600;
+    line-height: 1;
+}
+
 /* Promo block tilted, left-aligned, stacked text above glow column */
 .promo-block {
+    grid-column: 1;
+    grid-row: 1;
     margin-left: 24px; /* aligns with glow column */
     margin-bottom: 16px; /* spacing before image stack */
     transform: rotate(-2deg); /* mimics printed tilt */
     transform-origin: top left;
+    z-index: 2;
 }
 /* Promo text bold, shadowed, spaced for legibility and impact */
 .promo-text {
@@ -38,6 +117,7 @@ h1 {
 }
 
 .page-layout {
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; /* glow, center, orb*/
     grid-template-rows: auto auto 1fr auto; /* title, promo, group, footer*/
@@ -48,13 +128,19 @@ h1 {
     max-width: 1200px;
 }
 
+.mid-right {
+    position: relative;
+    grid-column: 2 /span 2;
+    grid-row: 2;
+}
+
 
 /* Glow column left-aligned, tight layout, responsive-safe*/
 .glow {
     grid-column: 1;
-    grid-row: 2;
+    grid-row: 2 / span 2;
     position: relative;
-    width: fit-content;
+    width: 18rem;
     margin-inline: 0;
     padding-block: 0;
     box-sizing: border-box;
@@ -94,7 +180,7 @@ h1 {
 .image-box {
     box-sizing: border-box;
     width: 100%;
-    max-width: 16.25rem;
+    max-width: 18rem;
     aspect-ratio: 13 / 9;
     overflow: hidden;
     border: 0.45em solid #007777;
@@ -107,6 +193,8 @@ h1 {
 }
 /* Center column: stacked promotional lines */
 .center-column {
+    grid-column: 2;
+    grid-row: 2;
     display: inline-block;
     vertical-align: top;
     margin-left: 3vw;
@@ -150,3 +238,38 @@ h1 {
     content: none;
 }
 
+
+
+.footer {
+    grid-column: 1 / span 3;
+    grid-row: 4;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 1rem;
+    margin-top: 2rem;
+    gap: 2rem;
+}
+
+.footer div {
+    flex: 1;
+    text-align: center;
+}
+
+.footer img {
+    max-width: 100px;
+    height: auto;
+}
+
+.footer p {
+    font-size: 0.8rem;
+    margin: 0.2em 0;
+}
+
+.legal {
+    font-size: 0.75rem;
+    text-align: center;
+    margin-top: 1rem;
+    padding: 1rem;
+    color: #333;
+}
