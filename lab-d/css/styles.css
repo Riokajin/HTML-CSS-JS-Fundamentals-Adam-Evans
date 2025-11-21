@@ -52,7 +52,7 @@ header nav li {
 	margin-right: 0.5em;
 	/* border-width: 1px;
 	border-style: dashed;
-	border-color: red; */ 
+	border-color: red; */ */
 
 }
 /* STEP 4b: Set the above LI elements (which default to display: block as we can see in the browser), to display: inline-block so that they line up horizontally across the top of the page */
@@ -74,7 +74,7 @@ main {
 /* STEP 5a: Put a 1px dotted hotpink border around MAIN SECTION in the CSS rule below so we can see the box on the screen */
 main section {
 	/* border: 1px dotted hotpink; */
-	padding: 1em;
+	padding: 1em 1em 1em 1em;
 	width: 60%;
 
 }
