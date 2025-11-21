@@ -1,5 +1,13 @@
 @charset "utf-8";
 
+/* font downloaded from https://freefonts.co/fonts/optiengeetienne-regular */
+@font-face {
+    font-family: 'OPTIEngeEtienne';
+    src: url('../fonts/OPTIEngeEtienne\ Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* Global reset and font setup for clean baseline and bold visual identity */
 body {
     margin: 0;
@@ -8,6 +16,47 @@ body {
     color: #000;
     font-family: 'Anton', 'Impact', system-ui, sans-serif;
 }
+
+.title-line {
+    font-family: 'OPTIEngeEtienne', sans-serif;
+    display: block;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    margin: 0.2em 0;
+    letter-spacing: 0.1em;
+}
+
+.title-line.top {
+    font-size: 2rem;
+    margin-bottom: 0.2em;
+}
+
+.title-line.middle {
+    font-size: 3.2rem;
+    margin-bottom: 0.2em;
+}
+.title-line.middle sup {
+    font-size: 0.2em;
+    vertical-align: bottom;
+    margin-left: 0.2em;
+}
+
+.title-line.middle::after {
+    content: "";
+    display: block;
+    width: 60%;
+    height: 0.25em;
+    margin: 0.5em auto 0 auto;
+    background-color: #000;
+}
+
+.title-line.bottom {
+    font-size: 2.4rem;
+}
+
+
+
 /* Header title centered, uppwercase, no shadow to match printed layout */
 h1 {
     text-align: center;
@@ -25,13 +74,11 @@ h1 {
     margin-bottom: 2;
 }
 
-.meteor-bg {
-    grid-column: 2 / span 2;
-    grid-row: 1;
+.meteor-bg {    
     position: absolute;
-    top: 50%;
+    top: 48%;
     left: 50%;
-    transform: translate (-50%, -50%) scale(1.2);
+    transform: translate(-50%, -50%) scale(1.2);
     opacity: 0.3;
     z-index: 0;
     max-width: 100%;
@@ -53,7 +100,7 @@ h1 {
 
 .group-shot img {
     position: relative;
-    max-width: 100%;
+    max-width: 90%;
     z-index: 3;
     height: auto;
 }
@@ -65,8 +112,8 @@ h1 {
     background: #c00000;    
     color: #fff;
     border-radius: 50%;
-    width: 15rem;
-    height: 15rem;
+    width: clamp(13rem, 14vw, 15rem);
+    height: clamp(13rem, 14vw, 15rem);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -140,7 +187,7 @@ h1 {
     grid-column: 1;
     grid-row: 2 / span 2;
     position: relative;
-    width: 18rem;
+    width: 20rem;
     margin-inline: 0;
     padding-block: 0;
     box-sizing: border-box;
@@ -180,7 +227,7 @@ h1 {
 .image-box {
     box-sizing: border-box;
     width: 100%;
-    max-width: 18rem;
+    max-width: 20rem;
     aspect-ratio: 13 / 9;
     overflow: hidden;
     border: 0.45em solid #007777;
