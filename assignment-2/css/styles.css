@@ -21,24 +21,35 @@ body {
     font-family: 'OPTIEngeEtienne', sans-serif;
     display: block;
     text-transform: uppercase;
-    font-weight: 900;
-    letter-spacing: 0.05em;
+    font-weight: 900;    
+    letter-spacing: 0.18em;
     margin: 0.2em 0;
     letter-spacing: 0.1em;
+    text-shadow: 
+      0 0 4px #fff,
+      0 0 8px #fff,
+      0 0 12px rgba(255,255,255,0.8);
+      color: #000
 }
 
 .title-line.top {
     font-size: 2rem;
-    margin-bottom: 0.2em;
+    margin: 0 0 0.2em 0;
+    align-self: flex-start;
+    margin-left: 36%;
+    text-align: left;
+    width: fit-content;
+    letter-spacing: 0.32em;
 }
 
 .title-line.middle {
     font-size: 3.2rem;
     margin-bottom: 0.2em;
 }
-.title-line.middle sup {
-    font-size: 0.2em;
-    vertical-align: bottom;
+.reg-mark {
+    font-size: 0.3em;
+    position: relative;
+    top: 0.00em;
     margin-left: 0.2em;
 }
 
@@ -53,6 +64,7 @@ body {
 
 .title-line.bottom {
     font-size: 2.4rem;
+    letter-spacing: 0.32em;
 }
 
 
@@ -85,6 +97,9 @@ h1 {
 }
 
 .title-block h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: relative;
     z-index: 1;
 }
