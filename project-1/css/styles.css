@@ -1,0 +1,54 @@
+/* Global Styles*/
+
+/* starting off by wiping out the default margins/padding so I have a clean slate */
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* going with a black background since Atari packaging leaned heavy on black, and white text for constrast so it pops nicely */
+body {
+    font-family: Arial, Helvetica, sans-serif; /* simple sans-serif for readability */
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6; /* spacing out lines a bit so text doesn't feel cramped */
+}
+
+/* Navigation bar with rainbow stripe effect as that was often used in Atari branding. Decorative and keeps links legible and spaced*/
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(
+        to right,
+        red,
+        orange,
+        yellow,
+        green,
+        blue,
+        indigo,
+        violet
+    );
+    padding: 10px;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
