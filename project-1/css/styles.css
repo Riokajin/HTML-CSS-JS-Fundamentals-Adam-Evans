@@ -19,11 +19,19 @@ body {
     line-height: 1.6; /* spacing out lines a bit so text doesn't feel cramped */
 }
 
+/* Header logo image inside the H1 */
+h1 img {
+    max-width: 120px; /* cap the width so it doesn't blow up */
+    height: auto;
+    vertical-align: middle;
+    margin-right: 10px
+}
+
 /* Navigation bar with rainbow stripe effect as that was often used in Atari branding. Decorative and keeps links legible and spaced*/
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     background: linear-gradient(
         to right,
         red,
@@ -48,7 +56,7 @@ nav ul li a {
     font-weight: bold;
     text-shadow: 1px 1px 2px black; /* dark outline for contrast*/
     display: inline-block;
-    padding-bottom: 4px
+    padding-bottom: 4px;
 }
 /* hover state: flip to black text so it's legible over yellow stripe*/
 nav ul li a:hover {
@@ -79,5 +87,51 @@ nav ul li a.active {
     100% { text-shadow: 0 0 4px violet, 0 0 16px violet; }
 }
 
+/* Responsive layout */
+
+/* phones and small tablets */
+@media (max-width: 600px) {
+    h1 img {
+        max-width: 80px;
+    }
+    nav ul {
+        flex-direction: column; /* stack links top-to-bottom */
+        align-items: center; /* center them horizontally */
+
+
+        /* vertical rainbow gradient for stacked layout */
+        background: linear-gradient(
+        to bottom,
+        red,
+        orange,
+        yellow,
+        green,
+        blue,
+        indigo,
+        violet
+    );
+    }
+    nav ul li {
+        margin: 10px 0; /* extra spacing between stacked links */
+    }
+    nav  ul li a {
+        font-size: 1.2rem; /* bigger tap targets */
+        padding: 12px 0; /* more vertical padding */
+    }
+}
+
+/* tablets and small laptops */
+@media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: landscape) {
+    nav ul {
+        flex-wrap: wrap; /* let links wrap if needed */
+    }
+    nav ul li {
+        margin: 8px 12px; /* slightly reduced spacing to fit more links */
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+}
 
 
