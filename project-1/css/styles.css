@@ -96,13 +96,12 @@ h2 {
     background: repeating-linear-gradient(
     to right,
     red 0%,
-    orange 14%,
-    yellow 28%,
-    green 42%,
-    blue 57%,
-    indigo 71%,
-    violet 85%,
-    red 100%
+    orange 16%,
+    yellow 32%,
+    green 48%,
+    blue 64%,
+    indigo 80%,
+    violet 100%
     );
 
     display: inline-block; /* keeps background box locked to text size for rainbow gradient to stay within length of text */
@@ -130,6 +129,7 @@ p {
     transform: rotate(2deg);
     color: white;
     font-family: 'VT323', monospace;
+    text-align: center
 }
 
 
