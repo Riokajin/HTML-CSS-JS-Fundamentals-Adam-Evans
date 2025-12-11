@@ -37,18 +37,32 @@ nav ul {
     padding: 10px;
     margin: 0;
 }
-
+/* spacing between nav items */
 nav ul li {
     margin: 0 15px;
 }
-
+/* links start as a bold white text with a shadow so they're readable on light colours */
 nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    text-shadow: 1px 1px 2px black; /* dark outline for contrast*/
+    display: inline-block;
+    padding-bottom: 4px
+}
+/* hover state: flip to black text so it's legible over yellow stripe*/
+nav ul li a:hover {
+    color: black;
+    text-decoration: underline;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+/* orange underline to show current page */
+nav ul li a.active {
+    background-color: #000; /* solid black highlight */
+    
+    border-radius: 4px; /* soften edges */
+    padding: 6px 10px; /* give the highlight some breathing room */
+
+    /* start with a glow */
 }
 
