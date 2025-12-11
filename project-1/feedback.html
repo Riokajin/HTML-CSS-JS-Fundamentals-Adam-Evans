@@ -4,10 +4,14 @@
         <meta charset="utf-8" />
         <!-- Link to external stylesheet for consistent design across all pages. -->
         <link rel="stylesheet" href="css/styles.css" />
+        <!-- JS script for feedback -->
+        <script src="js/interactions.js" defer></script>
+        <!-- Title shown in browser tab -->
         <title>Feedback</title>
     </head>
     <body>
-        <header>            
+        <header>      
+            <!-- Global navigation menu linking to all site pages-->      
             <nav>
                 <ul>
                     <li><a href="index.html">Promotion</a></li>
@@ -20,6 +24,42 @@
         </header>
 
         <main>
+            <!-- Feedback form section -->
+             <section>
+                <h2>We'd Love Your Feedback</h2>
+                <p>Please share your thoughts about Atari and the Video Computer System.</p>
+
+                <!-- Feedback form -->
+                 <form id="feedbackForm">
+                    <!-- Name input -->
+                     <label for="name">Name:</label>
+                     <input type="text" id="name" name="name" required />
+
+                     <!-- Email input -->
+                      <label for="email">Email:</label>
+                      <input type ="email" id="email" name="email" required />
+
+                      <!-- Rating dropdown -->
+                       <label for="rating">Rating:</label>
+                       <select id="rating" name="rating">
+                            <option value="5">Excellent</option>
+                            <option value="4">Good</option>
+                            <option value="3">Average</option>
+                            <option value="2">Poor</option>
+                            <option value="1">Terrible</option>
+                       </select>
+
+                       <!-- Comments textarea -->
+                        <label for="comments">Comments:</label>
+                        <textarea id="comments" name="comments"></textarea>
+
+                        <!-- Submit button -->
+                         <button type="submit">Submit Feedback</button>
+                 </form>
+
+                 <!-- Confirmation message placeholder -->
+                  <div id="confirmation"></div>
+             </section>
 
         </main>
 
