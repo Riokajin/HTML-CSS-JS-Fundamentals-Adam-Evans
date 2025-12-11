@@ -12,7 +12,8 @@ if (feedbackForm) {
             const name = document.getElementById("name").value;
             const ratingSelect = document.getElementById("rating");
             const ratingText = ratingSelect.options[ratingSelect.selectedIndex].text;
-            confirmation.innerText =`Thanks, ${name}! You rated us "${ratingText}".`;
+            const comments = document.getElementById("comments").value;
+            confirmation.innerText = `Thanks, ${name}! You rated us "${ratingText}". You said: "${comments}".`;
             confirmation.style.color = "limegreen";
             feedbackForm.reset(); 
         }

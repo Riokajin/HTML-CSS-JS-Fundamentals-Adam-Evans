@@ -134,6 +134,26 @@ p {
 
 /* Feedback form styles */
 
+.feedback-page main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* centers horizontally */
+    text-align: center;    /* centers headings and intro text */
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.feedback-page main h2,
+.feedback-page main p {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.feedback-page form {
+    margin-top: 1rem;
+    text-align: left;      /* keep labels/inputs aligned inside the grid */
+}
+
 form {
   display: grid;
   grid-template-columns: 120px 1fr;
@@ -145,6 +165,15 @@ form {
   border: 2px solid red;
   border-radius: 8px;
   box-shadow: 0 0 12px #ff0000;
+}
+
+#confirmation {
+    grid-column: 1 / span 2;
+    margin-top: 1rem;
+    color: limegreen;
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: 0 0 6px limegreen;
+    text-align: center;
 }
 
 
