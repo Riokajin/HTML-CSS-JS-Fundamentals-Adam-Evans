@@ -76,15 +76,17 @@ nav ul li a.active {
     animation: rainbowGlow 5s linear infinite;
 }
 
-/* keyframes to cycle through rainbow colors inner crisp glow and soft outer glow*/
+/* keyframes to cycle through rainbow colors inner crisp glow and soft outer glow. changed to smoothly transition back to red so the end of the loop isn't so noticeable*/ 
 @keyframes rainbowGlow {
     0% { text-shadow: 0 0 4px red, 0 0 16px red; }
-    16% { text-shadow: 0 0 4px orange, 0 0 16px orange; }
-    32% { text-shadow: 0 0 4px yellow, 0 0 16px yellow; }
-    48% { text-shadow: 0 0 4px green, 0 0 16px green; }
-    64% { text-shadow: 0 0 4px blue, 0 0 16px blue; }
-    80% { text-shadow: 0 0 4px indigo, 0 0 16px indigo; }
-    100% { text-shadow: 0 0 4px violet, 0 0 16px violet; }
+    14% { text-shadow: 0 0 4px orange, 0 0 16px orange; }
+    28% { text-shadow: 0 0 4px yellow, 0 0 16px yellow; }
+    42% { text-shadow: 0 0 4px green, 0 0 16px green; }
+    57% { text-shadow: 0 0 4px blue, 0 0 16px blue; }
+    71% { text-shadow: 0 0 4px indigo, 0 0 16px indigo; }
+    85% { text-shadow: 0 0 4px violet, 0 0 16px violet; }
+    92% { text-shadow: 0 0 4px magenta, 0 0 16px magenta; }
+    100% { text-shadow: 0 0 4px red, 0 0 16px red; }
 }
 
 /* Responsive layout */
