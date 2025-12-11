@@ -132,6 +132,21 @@ p {
     text-align: center
 }
 
+/* Feedback form styles */
+
+form {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #111;
+  border: 2px solid red;
+  border-radius: 8px;
+  box-shadow: 0 0 12px #ff0000;
+}
+
 
 
 /* keyframes to cycle through rainbow colors inner crisp glow and soft outer glow. changed to smoothly transition back to red so the end of the loop isn't so noticeable*/ 

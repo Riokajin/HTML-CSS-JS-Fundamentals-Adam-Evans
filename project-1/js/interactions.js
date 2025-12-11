@@ -9,7 +9,12 @@ if (feedbackForm) {
         event.preventDefault(); // prevent page reload    
         const confirmation = document.getElementById("confirmation");
         if (confirmation) {
-            confirmation.innerText = "Thank you for your feedback!";
+            const name = document.getElementById("name").value;
+            const ratingSelect = document.getElementById("rating");
+            const ratingText = ratingSelect.options[ratingSelect.selectedIndex].text;
+            confirmation.innerText =`Thanks, ${name}! You rated us "${ratingText}".`;
+            confirmation.style.color = "limegreen";
+            feedbackForm.reset(); 
         }
     });
 }
