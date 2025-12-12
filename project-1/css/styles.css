@@ -176,6 +176,61 @@ form {
     text-align: center;
 }
 
+/* FAQ accordion styles */
+.faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-family: 'Orbitron', sans-serif;
+    background: #000;
+    color: #fff;
+    border: 2px solid red;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    text-shadow: 0 0 4px #ff0000, 0 0 8px #ff6600;
+    transition: background-color 0.3s, transform 0.2s;
+    
+    cursor: pointer;
+}
+
+.faq-question::after {
+    content: '+';
+    float: right;
+    transition: transform 0.3s;
+}
+
+.faq-item.active .faq-question::after {
+    content: '-';
+}
+
+.faq-question:hover {
+    background: #111; /* slightly lighter black on hover */
+    transform: scale(1.02) /* subtle zoom effect */
+}
+
+.faq-answer {
+    display: none;
+    padding: 0.5rem 1rem;
+    background: #1a1a1a;
+    color: #ccc;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+
 
 
 /* keyframes to cycle through rainbow colors inner crisp glow and soft outer glow. changed to smoothly transition back to red so the end of the loop isn't so noticeable*/ 

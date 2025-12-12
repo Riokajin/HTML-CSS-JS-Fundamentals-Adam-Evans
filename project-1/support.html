@@ -5,6 +5,7 @@
         <!-- Link to external stylesheet for consistent design across all pages. -->
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/styles.css" />
+        <script src="js/interactions.js" defer></script>
         <title>Support</title>
     </head>
     <body>
@@ -25,36 +26,48 @@
 
         <main>
             <!-- FAQ section -->
-             <section>
-                <h2>Frequently Asked Questions</h2>
-                <h3>How do I insert a cartridge?</h3>
-                <p>Simply slide the cartridge into the slot until it clicks into place. Power on the console to begin play.</p>
+             <section class="faq">
+                <h2 class="rainbow-text angled">Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <button class="faq-question">How do I insert a cartridge?</button>
+                    <div class="faq-answer">
+                        <p>Insert the cartridge until it clicks securely, then power on to start instantly.</p>
+                    </div>
+                </div>
 
-                <h3>My joystick isn't responding. What should I do?</h3>
-                <p>Check the connection to the console and ensure the cable is secure. Try a different port if available.</p>
-
-                <h3>Is there a warranty?</h3>
-                <p>Yes, the Atari Video Computer System comes with a one-year limited warranty covering manufacturing defects.</p>
+                <div class="faq-item">
+                    <button class="faq-question">My joystick isn't responding. What should I do?</button>
+                    <div class="faq-answer">
+                        <p>Check the connection, try another port, or restart the console for a quick fix.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Is there a warranty?</button>
+                    <div class="faq-answer">
+                        <p>Yes, the Atari Video Computer System comes with a one-year limited warranty covering manufacturing defects.</p>
+                    </div>
+                </div>
              </section>
 
              <!-- Troubleshooting Tips -->
               <section>
-                <h2>Troubleshooting Tips</h2>
+                <h2 class="rainbow-text angled">Troubleshooting Tips</h2>
                 <ul>
                     <li>Ensure the power supply is firmly connected.</li>
                     <li>Clean cartridge contacts with a soft cloth if games do not load.</li>
                     <li>Restart the console after changing cartridges.</li>
                     <li>Keep the system in a cool, dry place to avoid overheating.</li>
+                    <li>Store cartridges in their cases to keep them dust-free.</li>
                 </ul>
               </section>
 
               <!-- Contact information -->
                <section>
-                <h2>Contact Support</h2>
+                <h2 class="rainbow-text angled">Contact Support</h2>
                 <p>If you need further assistance, please reach out to our support team:</p>
                 <ul>
-                    <li>Email: support@atari.com</li>
-                    <li>Phone: 1-800-ATARI-HELP</li><!-- Made too long on purpose as not a real number -->
+                    <li>Email: <a href="mailto:riokajin715@hotmail.com?subject=Atari%20Support%20Request">support@atari.com</a></li><!--links to my email-->
+                    <li>Phone: <a href="tel:14188194278"> 1-800-ATARI-HELP</a></li><!-- Made too long on purpose as not a real number. links to my phone number -->
                     <li>Mail: Atari Customer Service, Warner Communications</li>
                 </ul>
                </section>

@@ -1,5 +1,5 @@
 // This script handles user interactions across the site.
-// Examples: displaying confirmation messages after feedback submission, showing alerts when the "Order Now" button is clicked, and adding sumple dunamic behaviours to improve user experience.
+// Examples: displaying confirmation messages after feedback submission, showing alerts when the "Order Now" button is clicked, and adding simple dynamic behaviours to improve user experience.
 
 // Handles the feedback form submission:
 // Prevents the page from reloading, collects user input (name, email, rating, comments) and displays a confirmation message to the user.
@@ -19,4 +19,18 @@ if (feedbackForm) {
         }
     });
 }
-    
+
+
+// FAQ Accordion
+const faqItems = document.querySelectorAll('.faq-item');
+faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    question.addEventListener('click', () => {
+        // Close others so only 1 is open at a time
+        faqItems.forEach(i => {
+            if (i !== item) i.classList.remove('active');
+        });
+        // Toggle the clicked one
+        item.classList.toggle('active');
+    });
+});
