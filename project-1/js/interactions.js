@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (orderButton) {
         orderButton.addEventListener("click", () => {
-            // Redirect to Rick Astley video on YouTube")
-            window.location.href = "https:www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank"
+            // Open Rick Astley youtube video in new tab 
+            window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
         });
     }
 });
