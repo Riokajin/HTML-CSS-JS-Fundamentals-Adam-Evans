@@ -24,7 +24,7 @@ h1 img {
     max-width: 120px; /* cap the width so it doesn't blow up */
     height: auto;
     vertical-align: middle;
-    margin-right: 10px
+    margin-right: 10px; /* spacing between logo and text */
 }
 
 /* Navigation bar with rainbow stripe effect as that was often used in Atari branding. Decorative and keeps links legible and spaced*/
@@ -64,7 +64,7 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* orange underline to show current page */
+/* active page link. glowing highlight with rainbow animation*/
 nav ul li a.active {
     background-color: #000; /* solid black highlight */
     
@@ -76,22 +76,22 @@ nav ul li a.active {
     animation: rainbowGlow 5s linear infinite;
 }
 
-/* Retro Atari 2600 inspired text styles */
+/* Retro Atari 2600 inspired text styles and effects*/
 
-/* Page headings with glow + tilt */
+/* Page headings with glow */
 h2 {
     font-family: 'Press Start 2P', cursive;
     color: white;
     text-shadow: 0 0 6px red, 0 0 12px orange;
     margin: 20px 0;
 }
-
+/* tilted effect for arcade vibe */
 .angled {
     display: inline-block;
     transform: rotate(-3deg); /* slight tilt for arcade vibe */
 }
 
-/* Rainbow gradient text for slogans or special callouts */
+/* Rainbow gradient text for slogans and callouts */
 .rainbow-text {
     background: repeating-linear-gradient(
     to right,
@@ -110,7 +110,7 @@ h2 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
-    text-shadow: none;
+    text-shadow: none; /* gradient replaces glow */
 }
 
 /* Paragraphs with subtle gow */
@@ -120,6 +120,8 @@ p {
     text-shadow: 0 0 4px #ff0000, 0 0 8px #ff6600;
 }
 
+/* Non-nav lists */
+
 main ul {
     list-style: none;
     padding-left: 0;
@@ -127,15 +129,15 @@ main ul {
 
 main ul li {
     color: #fff;
-    font-family: 'orbitron', sans-serif;
+    font-family: 'Orbitron', sans-serif;
     text-shadow: 0 0 4px #ff0000, 0 0 8px #ff6600;
     margin: 0.5rem 0;
     position: relative;
     padding-left: 1.5rem;
 }
-
+/* Custom retro arrow bullet (▶) from Windows Character Map */
 main ul li::before {
-    content: "▶"; /* taken from windows character map win+R charmap and searched black right-pointing triangle*/
+    content: "▶"; /* Unicode U+25B6 */
     color: red;
     position: absolute;
     left: 0;
@@ -143,6 +145,7 @@ main ul li::before {
     text-shadow: 0 0 6px orange;
 }
 
+/* Rainbow bullets. each list item gets a different color - not all are used */
 main ul li:nth-child(1)::before { color: red; }
 main ul li:nth-child(2)::before { color: orange; }
 main ul li:nth-child(3)::before { color: yellow; }
@@ -169,11 +172,13 @@ main ul li:nth-child(7)::before { color: violet; }
 
 /* Feedback form styles */
 
+
+/* Centered layout for feedback page */
 .feedback-page main {
     display: flex;
     flex-direction: column;
-    align-items: center;   /* centers horizontally */
-    text-align: center;    /* centers headings and intro text */
+    align-items: center;   
+    text-align: center;    
     margin: 0 auto;
     max-width: 800px;
 }
@@ -189,11 +194,13 @@ main ul li:nth-child(7)::before { color: violet; }
     text-align: left;      /* keep labels/inputs aligned inside the grid */
 }
 
+/* Support Page Links */
+
 .support-page a {
     color: #00ffff;
     text-shadow: 0 0 2px #000;
     font-weight: bold;
-    text-decoration: unerline;
+    text-decoration: underline;
 }
 
 .support-page a:hover {
@@ -201,7 +208,7 @@ main ul li:nth-child(7)::before { color: violet; }
     text-shadow: 0 0 6px #ff6600;
 }
 
-
+/* Form Styles */
 
 form {
   display: grid;
@@ -216,6 +223,7 @@ form {
   box-shadow: 0 0 12px #ff0000;
 }
 
+/* Confirmation message after form submit */
 #confirmation {
     grid-column: 1 / span 2;
     margin-top: 1rem;
@@ -297,14 +305,14 @@ form {
 
 /* Responsive layout */
 
-/* phones and small tablets */
+/* phones and small tablets stack nav links vertically, shrink logo*/
 @media (max-width: 600px) {
     h1 img {
         max-width: 80px;
     }
     nav ul {
-        flex-direction: column; /* stack links top-to-bottom */
-        align-items: center; /* center them horizontally */
+        flex-direction: column; 
+        align-items: center; 
 
 
         /* vertical rainbow gradient for stacked layout */
@@ -341,7 +349,7 @@ form {
         font-size: 1rem;
     }
 }
-
+/* larger tablets and desktops. just for keeping callout boxes at a comfortable width */
 @media (min-width: 768px) {
     .callout {
         max-width: 600px;
