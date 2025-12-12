@@ -27,6 +27,29 @@ h1 img {
     margin-right: 10px; /* spacing between logo and text */
 }
 
+figure img {
+    border: 2px solid red;
+    border-radius: 6px;
+    box-shadow: 0 0 12px #ff0000;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+figure {
+    text-align: center;
+    margin: 1.5rem auto;
+}
+
+figcaption {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.9rem;
+    color: #ccc;
+    text-shadow: 0 0 4px #ff0000;
+    margin-top: 0.5rem;
+}
+
 /* Navigation bar with rainbow stripe effect as that was often used in Atari branding. Decorative and keeps links legible and spaced*/
 nav ul {
     list-style: none;
