@@ -120,16 +120,51 @@ p {
     text-shadow: 0 0 4px #ff0000, 0 0 8px #ff6600;
 }
 
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    color: #fff;
+    font-family: 'orbitron', sans-serif;
+    text-shadow: 0 0 4px #ff0000, 0 0 8px #ff6600;
+    margin: 0.5rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+main ul li::before {
+    content: "▶"; /* taken from windows character map win+R charmap and searched black right-pointing triangle*/
+    color: red;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-shadow: 0 0 6px orange;
+}
+
+main ul li:nth-child(1)::before { color: red; }
+main ul li:nth-child(2)::before { color: orange; }
+main ul li:nth-child(3)::before { color: yellow; }
+main ul li:nth-child(4)::before { color: green; }
+main ul li:nth-child(5)::before { color: blue; }
+main ul li:nth-child(6)::before { color: indigo; }
+main ul li:nth-child(7)::before { color: violet; }
+
+
 /* Retro callout boxes */
 .callout {
-    display: inline-block;
-    padding: 10px 20px;
+    display: block;
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1rem 1.5rem;
     background: black;
     border: 2px solid red;
     transform: rotate(2deg);
     color: white;
     font-family: 'VT323', monospace;
-    text-align: center
+    text-align: center;
+    box-shadow: 0 0 12px #ff0000
 }
 
 /* Feedback form styles */
@@ -293,4 +328,8 @@ form {
     }
 }
 
-
+@media (min-width: 768px) {
+    .callout {
+        max-width: 600px;
+    }
+}
