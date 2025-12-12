@@ -181,7 +181,7 @@ button {
     border-radius: 6px;
     text-shadow: 0 0 6px;
     cursor: pointer;
-    transition: transform 0.2s, bos-shadow 0.3s;
+    transition: transform 0.2s, box-shadow 0.3s;
 }
 
 button:hover {
