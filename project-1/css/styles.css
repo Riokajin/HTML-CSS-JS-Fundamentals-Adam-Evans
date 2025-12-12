@@ -170,6 +170,26 @@ main ul li:nth-child(7)::before { color: violet; }
     box-shadow: 0 0 12px #ff0000
 }
 
+/* Order Now button styles */
+button {
+    background: red; /* Atari red */
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
+    padding: 12px 24px;
+    border: 2px solid orange;
+    border-radius: 6px;
+    text-shadow: 0 0 6px;
+    cursor: pointer;
+    transition: transform 0.2s, bos-shadow 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05); /* subtle zoom */
+    box-shadow: 0 0 12px orange;
+    background: #ff6600; /* Atari orange on hover */
+}
+
 /* Feedback form styles */
 
 

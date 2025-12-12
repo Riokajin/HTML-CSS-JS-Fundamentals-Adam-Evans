@@ -1,6 +1,19 @@
 // This script handles user interactions across the site.
 // Examples: displaying confirmation messages after feedback submission, showing alerts when the "Order Now" button is clicked, and adding simple dynamic behaviours to improve user experience.
 
+//Rickroll interactivity for Order Now button
+document.addEventListener("DOMContentLoaded", () => {
+    const orderButton = document.querySelector("button");
+
+    if (orderButton) {
+        orderButton.addEventListener("click", () => {
+            // Redirect to Rick Astley video on YouTube")
+            window.location.href = "https:www.youtube.com/watch?v=dQw4w9WgXcQ";
+        });
+    }
+});
+
+
 // Handles the feedback form submission:
 // Prevents the page from reloading, collects user input (name, email, rating, comments) and displays a confirmation message to the user.
 const feedbackForm = document.getElementById("feedbackForm");

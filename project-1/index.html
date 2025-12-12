@@ -5,6 +5,8 @@
         <!-- Link to external stylesheet for consistent design across all pages. -->
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/styles.css" />
+        <!-- external Javascript for interaction (e.g., FAQ accordion, form confirmation -->
+        <script src="js/interactions.js" defer></script>
         <title>Promotion - Atari Video Computer System</title>
     </head>
     <body>
@@ -15,6 +17,7 @@
             <!-- Global navigation menu linking to all site pages-->
             <nav>                
                 <ul>
+                    <!-- Active link highlights current page -->
                     <li><a href="index.html" class="active">Promotion</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="feedback.html">Feedback</a></li>
@@ -25,8 +28,9 @@
         </header>
 
         <main>
+            <!-- Section introducing the product -->
             <section>
-                <!-- Section introducing the product -->
+                <!-- Rainbow-text heading emphasizes product name -->
                 <h2 class="rainbow-text">Atari Video Computer System</h2>
                 <p>
                     Step into the world of home entertainment with Atari. Experience arcade excitement right in your living room with interchangeable cartridges and endless hours of play.
@@ -35,8 +39,10 @@
             </section>
             <!-- Section highlighting selling points and call-to-action -->
             <section>
+                <!-- Angled heading adds retro arcade vibe -->
                 <h2 class="angled">Why Choose Atari?</h2>
-                <!-- unordered list of product benefits -->
+                
+                <!-- unordered list of product benefits styled with rainbow arrows-->
                 <ul>
                     <li>Interchangeable cartridges for endless variety</li>
                     <li>Authentic arcade action at home</li>
@@ -51,16 +57,20 @@
                         With <span class="rainbow-text">TWO CONTROLLERS</span><br>
                          AND <br>
                          Your choice of a <span class="rainbow-text">GAME CARTRIDGE</span> <br>
-                         At an <span class="rainbow-text">UNBEATABLE</span> price.</span>
+                         At an <span class="rainbow-text">UNBEATABLE</span> price.
+                        </span>
                 </p>
-                <!-- Order button -->
-                <button>Order Now</button>
+
+                <!-- Order button (interactive stling handled in CSS/JS)-->
+                <button type="button">Order Now</button>
             </section>
         </main>
+
         <footer>
+            <!-- Footer includes trademark and company attribution -->
             <p><small>Atari&reg; Video Computer System&trade;. A Warner Communications Company</small></p>
             
         </footer>
-        <script src="js/interactions.js"></script>
+        
     </body>
 </html>
