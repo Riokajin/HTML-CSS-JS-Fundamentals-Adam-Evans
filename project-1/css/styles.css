@@ -251,6 +251,12 @@ form {
     font-family: 'Press Start 2P', cursive;
     text-shadow: 0 0 6px limegreen;
     text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+#confirmation.show {
+    opacity: 1;
 }
 
 /* FAQ accordion styles */
