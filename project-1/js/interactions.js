@@ -34,16 +34,25 @@ if (feedbackForm) {
 }
 
 
-// FAQ Accordion
+// FAQ Accordion: improves usability by only showing one answer at a time
 const faqItems = document.querySelectorAll('.faq-item');
 faqItems.forEach(item => {
     const question = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer'); 
     question.addEventListener('click', () => {
         // Close others so only 1 is open at a time
         faqItems.forEach(i => {
-            if (i !== item) i.classList.remove('active');
+            const q = i.querySelector('.faq-question');
+            const a = i.querySelector('.faq-answer');
+            if (i !== item) {
+                i.classList.remove('active');
+                q.setAttribute('aria-expanded', 'false');
+                a.setAttribute('aria-hidden', 'true');
+            }
         });
         // Toggle the clicked one
-        item.classList.toggle('active');
+        const isActive = item.classList.toggle('active');
+        question.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+        answer.setAttribute('aria-hidden', isActive ? 'false' :  'true');
     });
 });
