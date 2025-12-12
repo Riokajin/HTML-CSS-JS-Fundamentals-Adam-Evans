@@ -3,12 +3,12 @@
 
 //Rickroll interactivity for Order Now button
 document.addEventListener("DOMContentLoaded", () => {
-    const orderButton = document.querySelector("button");
+    const orderButton = document.getElementById("order-btn");
 
     if (orderButton) {
         orderButton.addEventListener("click", () => {
             // Redirect to Rick Astley video on YouTube")
-            window.location.href = "https:www.youtube.com/watch?v=dQw4w9WgXcQ";
+            window.location.href = "https:www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank"
         });
     }
 });
